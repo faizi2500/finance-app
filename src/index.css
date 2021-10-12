@@ -23,7 +23,7 @@ body {
 }
 
 .holder {
-  width: 60%;
+  width: 57%;
   margin-left: auto;
   display: flex;
   /* align-items: center; */
@@ -96,7 +96,14 @@ body {
   gap: 40%;
 }
 
+.navLink {
+  text-decoration: none;
+}
+
 .companyName {
   text-align: center;
-  width: 70%
+  font-size: 20px;
+  width: 80%;
+  margin-inline: auto;
+  color: white;
 }

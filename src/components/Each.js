@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FaArrowRight } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 // import PTGX from '../PTGX.png';
 
 const Each = ({
@@ -17,7 +18,15 @@ const Each = ({
   return (
     <div className={boxStyle}>
       <FaArrowRight className="arrow" />
-      <h3 className="companyName">{company}</h3>
+      <NavLink
+        className="navLink"
+        to={{
+          pathname: '/company',
+          name,
+        }}
+      >
+        <h4 className="companyName">{company}</h4>
+      </NavLink>
       <div className="combine-details">
         <h3>{name}</h3>
         <h3>
@@ -34,7 +43,6 @@ Each.propTypes = {
   price: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
   company: PropTypes.string.isRequired,
-  // status: PropTypes.bool.isRequired,
 };
 
 export default Each;

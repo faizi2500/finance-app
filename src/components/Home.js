@@ -1,17 +1,10 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Each from './Each';
-// import { getImages } from '../redux/home/images';
 
 const Home = ({ nasdaq }) => {
   const companies = nasdaq;
   companies.sort((a, b) => b.changesPercentage - a.changesPercentage);
-  // console.log(companies);
-  // const dipatch = useDispatchc()
-  // useEffect(() => {
-  //   dipatch(getImages(companies));
-  // }, [companies]);
   return (
     <>
       <div className="full-width">
@@ -26,6 +19,7 @@ const Home = ({ nasdaq }) => {
     </>
   );
 };
+
 Home.propTypes = {
   nasdaq: PropTypes.instanceOf(Object).isRequired,
 };

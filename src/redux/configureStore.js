@@ -2,11 +2,11 @@ import { applyMiddleware, createStore, combineReducers } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import countriesReducer from './home/home';
-import imagesReducer from './home/images';
+import companyReducer from './company/company';
 
 const reducer = combineReducers({
   countriesReducer,
-  imagesReducer,
+  companyReducer,
 });
 
 const store = createStore(
