@@ -1,8 +1,6 @@
 const COUNTRIES = 'app/home/FETCH-COUNTRIES';
-// const IMAGES = 'app/home/FETCH-IMAGES';
+
 const initialState = [];
-// const initialLink = 'https://financialmodelingprep.com/api/v3/profile/';
-// const endLink = '?apikey=80374e700444bba4ab5b199f0786e0ea'
 
 const fetchData = (payload) => (
   {

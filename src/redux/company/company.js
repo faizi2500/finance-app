@@ -30,7 +30,9 @@ export const fetchCompanyFinancials = (symbol) => async (dispatch) => {
   };
   const details = await fetch(`https://financialmodelingprep.com/api/v3/financial-growth/${symbol}?limit=20&apikey=70b9bd945b8252537780413eb681a7d1`, requestOptions);
   const responseData = await details.json();
-  dispatch(companyFinances(responseData));
+  const newArray = [];
+  newArray.push(responseData[0]);
+  dispatch(companyFinances(newArray));
 };
 
 const reducer = (state = initialState, action) => {

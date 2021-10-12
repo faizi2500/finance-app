@@ -1,5 +1,4 @@
 import React from 'react';
-// impoty { FaMicrophone } from 'react'
 import { FaMicrophone, FaCog } from 'react-icons/fa';
 
 const Top = () => (

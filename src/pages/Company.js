@@ -3,28 +3,55 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { fetchCompanyFinancials, fetchCompanyDetails } from '../redux/company/company';
+import CompanyPage from '../components/CompanyPage';
 
 const Company = () => {
   const data = useLocation();
-  const symbol = data.name;
+  const url = window.location.pathname;
+  const newString = url.substring(8);
+  let symbol = data.name;
+  if (typeof symbol === 'undefined') {
+    symbol = newString;
+  }
   const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(fetchCompanyDetails(symbol));
-    dispatch(fetchCompanyFinancials(symbol));
-  }, []);
+    if (symbol) {
+      dispatch(fetchCompanyDetails(symbol));
+      dispatch(fetchCompanyFinancials(symbol));
+    }
+  }, [symbol]);
+
+  // { companyInfo && companyInfo.map((info) => (
+  //   console.log(info.symbol)
+  // ))};
   return (
     <>
-      <h1>
-        Hello
-      </h1>
+      <CompanyPage />
     </>
   );
 };
 
-// Company.propTypes = {
-// eslint-disable-next-line react/no-unused-prop-types
-// name: PropTypes.string.isRequired,
-// };
-
 export default Company;
+// (<ul>
+//   {companyInfo && companyInfo
+//     .map((info) => {
+//       const {
+//         symbol,
+//         companyName,
+//         image,
+//         exchangeShortName,
+//         sector,
+//       } = info;
+//       return (
+//         <li key={symbol}>
+//           <CompanyPage
+//             symbol={symbol}
+//             companyName={companyName}
+//             image={image}
+//             exchangeShortName={exchangeShortName}
+//             sector={sector}
+//           />
+//         </li>
+//       );
+//     })}
+// </ul> )
