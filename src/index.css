@@ -1,27 +1,102 @@
 body {
+  background: #4369b2;
+  width: 100%;
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+.top-body {
+  width: 100%;
+  background-color: #35548b;
+  color: white;
+  height: 42px
+}
+
+.top-heading {
+  margin-top: 9px;
+  font-size: 20px;
+}
+
+.cover-img {
+  width: 100%;
+  height: 235px;
+}
+
+.holder {
+  width: 60%;
+  margin-left: auto;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  color: white;
+}
+
+.icons > * {
+  margin: 0 5px;
+  margin-top: 10px;
+}
+
+.box {
+  border: 1px solid black;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.full-width {
+  width: 100%;
+  background-color: #35548b;
+  color: white;
+}
+
+.list-heading {
+  margin-left: 2%;
+  padding-block: 2%;
+  font-size: 18px;
+  margin-block: 0;
+}
+
+.oddBox, .evenBox {
+  width: 49.5%;
+  height: 160px;
+  color: white;
+  background-image: linear-gradient(to bottom, #4066a6, #3d5f99, #3a588c, #37517f, #344a73);
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.oddBox {
+  margin-left: 0.5%;
+}
+
+.oddBox h3, .evenBox h3 {
+  margin: 0;
+}
+.evenBox:hover , .oddBox:hover {
+  transform: scale(1.02);
+}
+
+.arrow {
+  border: 1px solid white;
+  color: white;
+  border-radius: 50%;
+  margin: 10px 10px 0 0;
+  align-self: flex-end;
+}
+
+.combine-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 40%;
+}
+
+.companyName {
+  text-align: center;
+  width: 70%
 }

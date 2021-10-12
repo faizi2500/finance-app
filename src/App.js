@@ -1,29 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { listAPIcall } from './redux/home/home';
+import Top from './components/Top';
+import Home from './components/Home';
+import cover from './cover.jpg';
 
-function App() {
+const App = () => {
+  const result = useSelector((state) => state.countriesReducer);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(listAPIcall());
+    // dispatch(getImages(result));
+  }, []);
+  // useEffect(() => {
+  //   dispatch(getImages(result));
+  // }, []);
+  // console.log(result.length);
+  // const highPerformer = result.filter((a, b) => parseFloat(a.) )
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Top />
+      <img className="cover-img" src={cover} alt="Grow" />
+      <div>
+        <Home nasdaq={result} />
+      </div>
+    </>
   );
-}
+};
 
 export default App;
