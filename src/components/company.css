@@ -1,0 +1,111 @@
+.top-banner-parent {
+  background-color: #35548b;
+}
+
+body {
+  background-color: transparent;
+}
+
+.flex-company-banner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #35548b;
+}
+
+.parent-banner-div {
+  background: white;
+}
+
+.banner-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 5%;
+}
+
+.banner-details > h1 {
+  margin: 0;
+  margin-bottom: 5%;
+}
+
+.banner-details > p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.banner-details {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: left;
+}
+
+.banner-description-para {
+  width: 95%;
+  margin-inline: auto;
+  text-align: left;
+  font-size: 15px;
+}
+
+.banner-description-para > p {
+  margin-block: 0;
+  padding-bottom: 10px;
+}
+
+
+.web {
+  color: rgb(35, 150, 226);
+}
+
+.web:hover {
+  color:blue;
+}
+
+.finance-heading-container {
+  width: 100%;
+  background-color: #35548b;
+  color: white;
+}
+
+.finance-heading {
+  margin-left: 2%;
+  padding-block: 2%;
+  font-size: 18px;
+  margin-block: 0;
+}
+
+.evenFinancial {
+  background-color: #152238;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.evenFinancial *, .oddFinancial  * {
+  margin: 0;
+}
+
+.oddFinancial {
+  background-color: #23395d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between
+}
+
+.financialDes {
+  width: 95%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%; 
+}
