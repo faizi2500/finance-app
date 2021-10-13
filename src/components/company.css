@@ -1,14 +1,55 @@
-.top-banner-parent {
-  background-color: #35548b;
-}
-
 body {
   background-color: transparent;
 }
 
+.beingLoaded {
+  background-color: #35548b;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.rotateSpinner {
+  margin-left: 5%;
+  transform: scale(5);
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.top-banner-parent {
+  background-color: #35548b;
+}
+
+.flex-company-banner > a {
+  color: white;
+}
+.flex-company-banner > a:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.navTitle {
+  font-size: 18px;
+}
+
+.right-side-banner > * {
+  margin-inline: 7px;
+}
+
 .flex-company-banner {
-  width: 90%;
-  margin: 0 auto;
+  width: 98%;
+  margin-block: 0;
+  margin-left: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;

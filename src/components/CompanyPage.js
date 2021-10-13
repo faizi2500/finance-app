@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FaSpinner } from 'react-icons/fa';
 import CompanyTop from './CompanyTop';
 import CompanyBanner from './CompanyBanner';
 import FinanceHeading from './FinanceHeading';
 import FinanceSection from './FinanceSection';
 
 const CompanyPage = ({ info, symbol }) => {
-  // console.log(info);
   const companyInformation = info.responseFinancials;
   const companyFinanceInfo = info.responseData;
 
@@ -117,7 +117,11 @@ const CompanyPage = ({ info, symbol }) => {
             })}
           </>
         )
-        : (<p>Loading</p>)}
+        : (
+          <div className="beingLoaded">
+            <FaSpinner className="rotateSpinner" />
+          </div>
+        )}
     </>
   );
 };
@@ -134,11 +138,3 @@ CompanyPage.propTypes = {
 };
 
 export default CompanyPage;
-
-// ({
-//   symbol,
-//   companyName,
-//   image,
-//   exchangeShortName,
-//   sector,
-// })

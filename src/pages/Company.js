@@ -4,6 +4,7 @@ import { useLocation } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCompanyFinancials } from '../redux/company/company';
 import CompanyPage from '../components/CompanyPage';
+import '../components/company.css';
 
 const Company = () => {
   const data = useLocation();
@@ -16,13 +17,11 @@ const Company = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (symbol) {
-      // dispatch(fetchCompanyDetails(symbol));
       dispatch(fetchCompanyFinancials(symbol));
     }
   }, [symbol]);
   const companyData = useSelector((state) => state.companyReducer.payload);
   const [newState, setState] = useState(companyData);
-  // let count = 1;
   setTimeout(() => {
     setState(companyData);
   }, 2000);
@@ -34,26 +33,3 @@ const Company = () => {
 };
 
 export default Company;
-// (<ul>
-//   {companyInfo && companyInfo
-//     .map((info) => {
-//       const {
-//         symbol,
-//         companyName,
-//         image,
-//         exchangeShortName,
-//         sector,
-//       } = info;
-//       return (
-//         <li key={symbol}>
-//           <CompanyPage
-//             symbol={symbol}
-//             companyName={companyName}
-//             image={image}
-//             exchangeShortName={exchangeShortName}
-//             sector={sector}
-//           />
-//         </li>
-//       );
-//     })}
-// </ul> )
