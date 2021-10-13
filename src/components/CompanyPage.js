@@ -1,53 +1,52 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import CompanyTop from './CompanyTop';
+import CompanyBanner from './CompanyBanner';
 
-const CompanyPage = () => {
-  const companyData = useSelector((state) => state.companyReducer);
-  const companyInfo = companyData[0];
-  let obj = {};
-  if (companyInfo) {
-    companyInfo.map((info) => {
+const CompanyPage = ({ info, symbol }) => {
+  // console.log(info);
+  const companyInformation = info.responseFinancials;
+  // console.log('info', companyInformation);
+  let newObj;
+  if (companyInformation) {
+    companyInformation.map((each) => {
       const {
-        symbol,
         companyName,
         image,
         exchangeShortName,
         sector,
-      } = info;
-      console.log(companyName);
-      obj = {
-        symbol,
+      } = each;
+      newObj = {
         companyName,
         image,
         exchangeShortName,
         sector,
       };
-      return obj;
+      return newObj;
     });
   }
-  console.log(obj);
+  console.log('obj', newObj);
+
   return (
     <>
-      <CompanyTop name={obj.companyName} />
-      {/* <ul>
-        <li>{symbol}</li>
-        <li>{image}</li>
-        <li>{exchangeShortName}</li>
-        <li>{sector}</li>
-      </ul> */}
+      <CompanyTop symbol={symbol} />
+      {(newObj)
+        ? <CompanyBanner name={newObj.companyName} />
+        : <p>Loading</p>}
     </>
   );
 };
 
-// CompanyPage.propTypes = {
-//   symbol: PropTypes.string.isRequired,
-//   companyName: PropTypes.string.isRequired,
-//   image: PropTypes.string.isRequired,
-//   exchangeShortName: PropTypes.string.isRequired,
-//   sector: PropTypes.string.isRequired,
-// };
+CompanyPage.defaultProps = {
+  info: {
+    status: false,
+  },
+};
+
+CompanyPage.propTypes = {
+  info: PropTypes.instanceOf(Object),
+  symbol: PropTypes.string.isRequired,
+};
 
 export default CompanyPage;
 

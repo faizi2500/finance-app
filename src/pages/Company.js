@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 // import PropTypes from 'prop-types';
 import { useLocation } from 'react-router';
-import { useDispatch } from 'react-redux';
-import { fetchCompanyFinancials, fetchCompanyDetails } from '../redux/company/company';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCompanyFinancials } from '../redux/company/company';
 import CompanyPage from '../components/CompanyPage';
 
 const Company = () => {
@@ -16,17 +16,19 @@ const Company = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (symbol) {
-      dispatch(fetchCompanyDetails(symbol));
+      // dispatch(fetchCompanyDetails(symbol));
       dispatch(fetchCompanyFinancials(symbol));
     }
   }, [symbol]);
-
-  // { companyInfo && companyInfo.map((info) => (
-  //   console.log(info.symbol)
-  // ))};
+  const companyData = useSelector((state) => state.companyReducer.payload);
+  const [newState, setState] = useState(companyData);
+  // let count = 1;
+  setTimeout(() => {
+    setState(companyData);
+  }, 2000);
   return (
     <>
-      <CompanyPage />
+      <CompanyPage info={newState} symbol={symbol} />
     </>
   );
 };
