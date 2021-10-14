@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { listAPIcall } from '../redux/home/home';
 import Top from '../components/Top';
 import Home from '../components/Home';
-import cover from '../cover.jpg';
+import cover from '../assets/cover.jpg';
 
 const Main = () => {
   const dispatch = useDispatch();
