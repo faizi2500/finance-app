@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const FinanceSection = ({ eachObj, indexValue }) => {
   const name = Object.keys(eachObj);
-  console.log(name);
   const stringified = JSON.stringify(name);
   const splicedData = stringified.slice(0, -5);
   const finalIndicator = splicedData.charAt(2).toUpperCase() + splicedData.slice(3);

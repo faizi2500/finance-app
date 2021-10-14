@@ -21,6 +21,7 @@ body {
   50% {
     transform: rotate(360deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -33,6 +34,7 @@ body {
 .flex-company-banner > a {
   color: white;
 }
+
 .flex-company-banner > a:hover {
   transform: scale(1.1);
   color: white;
@@ -81,8 +83,7 @@ body {
 .banner-details {
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
-  align-items: left;
+  justify-content: flex-start;
 }
 
 .banner-description-para {
@@ -97,13 +98,12 @@ body {
   padding-bottom: 10px;
 }
 
-
 .web {
   color: rgb(35, 150, 226);
 }
 
 .web:hover {
-  color:blue;
+  color: blue;
 }
 
 .finance-heading-container {
@@ -129,17 +129,19 @@ body {
   height: 100px;
 }
 
-.evenFinancial *, .oddFinancial  * {
+.evenFinancial *,
+.oddFinancial * {
   margin: 0;
 }
 
 .color-financials:nth-child(2n-1) {
   background: linear-gradient(to bottom, #4066a6, #3d5f99, #3a588c, #37517f, #344a73);
+
   /* background-color: white; */
 }
 
 .color-financials:nth-child(2n) {
-  background: linear-gradient(to bottom, #000428, #004E92);
+  background: linear-gradient(to bottom, #000428, #004e92);
 }
 
 .oddFinancial {
@@ -148,7 +150,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100px;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .financialDes {
@@ -158,5 +160,5 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10%; 
+  margin-top: 10%;
 }
