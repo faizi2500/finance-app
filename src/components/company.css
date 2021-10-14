@@ -13,7 +13,7 @@ body {
 
 .rotateSpinner {
   margin-left: 5%;
-  transform: scale(5);
+  transform: scale(10);
   animation: rotation 2s infinite linear;
 }
 
@@ -117,10 +117,11 @@ body {
   padding-block: 2%;
   font-size: 18px;
   margin-block: 0;
+  text-align: center;
 }
 
 .evenFinancial {
-  background-color: #152238;
+  /* background-color: #152238; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -132,8 +133,17 @@ body {
   margin: 0;
 }
 
+.color-financials:nth-child(2n-1) {
+  background: linear-gradient(to bottom, #4066a6, #3d5f99, #3a588c, #37517f, #344a73);
+  /* background-color: white; */
+}
+
+.color-financials:nth-child(2n) {
+  background: linear-gradient(to bottom, #000428, #004E92);
+}
+
 .oddFinancial {
-  background-color: #23395d;
+  /* background-color: #23395d; */
   color: white;
   display: flex;
   flex-direction: column;

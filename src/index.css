@@ -36,19 +36,26 @@ body {
   margin-top: 10px;
 }
 
-.box {
-  border: 1px solid black;
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.container-child {
+  width: 50%;
+  background: linear-gradient(to bottom, #4066a6, #3d5f99, #3a588c, #37517f, #344a73);
+}
+
+.container-child:nth-child(4n + 2),
+.container-child:nth-child(4n + 3) {
+  background: linear-gradient(to bottom, #000428, #004E92);
 }
 
 .full-width {
   width: 100%;
   background-color: #35548b;
   color: white;
+  text-align: center;
 }
 
 .list-heading {
@@ -59,33 +66,29 @@ body {
 }
 
 .oddBox, .evenBox {
-  width: 49.5%;
-  height: 160px;
+  width: 98%;
+  height: 170px;
   color: white;
-  background-image: linear-gradient(to bottom, #4066a6, #3d5f99, #3a588c, #37517f, #344a73);
   text-align: end;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
-
-.oddBox {
-  margin-left: 0.5%;
+  margin-block: 2%;
 }
 
 .oddBox h3, .evenBox h3 {
   margin: 0;
 }
+
 .evenBox:hover , .oddBox:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 .arrow {
   border: 1px solid white;
   color: white;
   border-radius: 50%;
-  margin: 10px 10px 0 0;
   align-self: flex-end;
 }
 

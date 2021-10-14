@@ -11,7 +11,6 @@ const CompanyBanner = ({
   volAvg,
   website,
 }) => {
-  // const des = description.substring(0, 200);
   const newdes = description.split(/\s+/).slice(0, 35).join(' ');
   return (
     <div className="parent-banner-div">

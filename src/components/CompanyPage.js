@@ -112,7 +112,9 @@ const CompanyPage = ({ info, symbol }) => {
             {financialList.map((elem, index) => {
               const id = index + 1;
               return (
-                <FinanceSection key={id} eachObj={elem} indexValue={index} />
+                <div key={id} className="color-financials">
+                  <FinanceSection eachObj={elem} indexValue={index} />
+                </div>
               );
             })}
           </>
