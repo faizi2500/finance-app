@@ -10,7 +10,7 @@ const Company = () => {
   const data = useLocation();
   const url = window.location.href;
   const newString = url.substring(39);
-  let symbol = newString;
+  const symbol = newString;
   const dispatch = useDispatch();
   useEffect(() => {
     if (symbol) {
