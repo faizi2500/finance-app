@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+// import { BrowserRouter as Router } from 'react-router-dom';
 import { useLocation } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCompanyFinancials } from '../redux/company/company';
@@ -26,9 +26,11 @@ const Company = () => {
     setState(companyData);
   }, 2000);
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    // <Router basename={process.env.PUBLIC_URL}>
+    <>
       <CompanyPage info={newState} symbol={symbol} />
-    </Router>
+    </>
+    // </Router>
   );
 };
 
