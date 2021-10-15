@@ -9,6 +9,9 @@ const App = () => (
       <Route path="/company:name">
         <Company />
       </Route>
+      <Route path="/company">
+        <Company />
+      </Route>
       <Route exact path="/">
         <Main />
       </Route>
