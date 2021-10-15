@@ -12,7 +12,7 @@ const Company = () => {
   const newString = url.substring(8);
   let symbol = data.name;
   if (typeof symbol === 'undefined') {
-    symbol = newString.toUpperCase();
+    symbol = newString;
   }
   const dispatch = useDispatch();
   useEffect(() => {
