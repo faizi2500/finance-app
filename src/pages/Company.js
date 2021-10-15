@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 // import { BrowserRouter as Router } from 'react-router-dom';
-import { useLocation } from 'react-router';
+// import { useLocation } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCompanyFinancials } from '../redux/company/company';
 import CompanyPage from '../components/CompanyPage';
 import '../components/company.css';
 
 const Company = () => {
-  const data = useLocation();
+  // const data = useLocation();
   const url = window.location.href;
   const newString = url.substring(39);
-  let symbol = data.name;
-  if (typeof symbol === 'undefined') {
-    symbol = newString;
-  }
+  // let symbol = data.name;
+  // if (typeof symbol === 'undefined') {
+  const symbol = newString;
   const dispatch = useDispatch();
   useEffect(() => {
     if (symbol) {
