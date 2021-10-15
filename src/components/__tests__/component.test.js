@@ -8,7 +8,6 @@ import Main from '../../pages/Main';
 import Each from '../Each';
 import Home from '../Home';
 import Top from '../Top';
-// import cover from './cover.jpg';
 
 test('renders correctly', () => {
   const home = renderer

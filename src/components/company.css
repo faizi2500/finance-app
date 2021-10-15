@@ -121,7 +121,6 @@ body {
 }
 
 .evenFinancial {
-  /* background-color: #152238; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -136,8 +135,6 @@ body {
 
 .color-financials:nth-child(2n-1) {
   background: linear-gradient(to bottom, #4066a6, #3d5f99, #3a588c, #37517f, #344a73);
-
-  /* background-color: white; */
 }
 
 .color-financials:nth-child(2n) {
@@ -145,7 +142,6 @@ body {
 }
 
 .oddFinancial {
-  /* background-color: #23395d; */
   color: white;
   display: flex;
   flex-direction: column;

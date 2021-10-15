@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FaArrowRight } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-// import PTGX from '../PTGX.png';
 
 const Each = ({
   name,

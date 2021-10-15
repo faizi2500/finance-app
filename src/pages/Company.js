@@ -7,11 +7,8 @@ import CompanyPage from '../components/CompanyPage';
 import '../components/company.css';
 
 const Company = () => {
-  // const data = useLocation();
   const url = window.location.href;
   const newString = url.substring(39);
-  // let symbol = data.name;
-  // if (typeof symbol === 'undefined') {
   const symbol = newString;
   const dispatch = useDispatch();
   useEffect(() => {
@@ -25,11 +22,9 @@ const Company = () => {
     setState(companyData);
   }, 2000);
   return (
-    // <Router basename={process.env.PUBLIC_URL}>
     <>
       <CompanyPage info={newState} symbol={symbol} />
     </>
-    // </Router>
   );
 };
 

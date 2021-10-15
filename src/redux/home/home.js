@@ -24,7 +24,7 @@ const reducer = (state = initialState, action) => {
     case COUNTRIES:
       return action.payload;
     default:
-      return state;
+      return action.payload;
   }
 };
 

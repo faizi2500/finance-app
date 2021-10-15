@@ -26,8 +26,6 @@ body {
   width: 57%;
   margin-left: auto;
   display: flex;
-
-  /* align-items: center; */
   justify-content: space-between;
   color: white;
 }
