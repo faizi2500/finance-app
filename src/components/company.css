@@ -1,0 +1,160 @@
+body {
+  background-color: transparent;
+}
+
+.beingLoaded {
+  background-color: #35548b;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.rotateSpinner {
+  margin-left: 5%;
+  transform: scale(10);
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.top-banner-parent {
+  background-color: #35548b;
+}
+
+.flex-company-banner > a {
+  color: white;
+}
+
+.flex-company-banner > a:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.navTitle {
+  font-size: 18px;
+}
+
+.right-side-banner > * {
+  margin-inline: 7px;
+}
+
+.flex-company-banner {
+  width: 98%;
+  margin-block: 0;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #35548b;
+}
+
+.parent-banner-div {
+  background: white;
+}
+
+.banner-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 5%;
+}
+
+.banner-details > h1 {
+  margin: 0;
+  margin-bottom: 5%;
+}
+
+.banner-details > p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.banner-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.banner-description-para {
+  width: 95%;
+  margin-inline: auto;
+  text-align: left;
+  font-size: 15px;
+}
+
+.banner-description-para > p {
+  margin-block: 0;
+  padding-bottom: 10px;
+}
+
+.web {
+  color: rgb(35, 150, 226);
+}
+
+.web:hover {
+  color: blue;
+}
+
+.finance-heading-container {
+  width: 100%;
+  background-color: #35548b;
+  color: white;
+}
+
+.finance-heading {
+  margin-left: 2%;
+  padding-block: 2%;
+  font-size: 18px;
+  margin-block: 0;
+  text-align: center;
+}
+
+.evenFinancial {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.evenFinancial *,
+.oddFinancial * {
+  margin: 0;
+}
+
+.color-financials:nth-child(2n-1) {
+  background: linear-gradient(to bottom, #4066a6, #3d5f99, #3a588c, #37517f, #344a73);
+}
+
+.color-financials:nth-child(2n) {
+  background: linear-gradient(to bottom, #000428, #004e92);
+}
+
+.oddFinancial {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.financialDes {
+  width: 95%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+}

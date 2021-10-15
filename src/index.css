@@ -1,0 +1,114 @@
+body {
+  background: #4369b2;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top-body {
+  width: 100%;
+  background-color: #35548b;
+  color: white;
+  height: 42px;
+}
+
+.top-heading {
+  margin-top: 9px;
+  font-size: 20px;
+}
+
+.cover-img {
+  width: 100%;
+  height: 235px;
+}
+
+.holder {
+  width: 57%;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.icons > * {
+  margin: 0 5px;
+  margin-top: 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-child {
+  width: 50%;
+  background: linear-gradient(to bottom, #4066a6, #3d5f99, #3a588c, #37517f, #344a73);
+}
+
+.container-child:nth-child(4n + 2),
+.container-child:nth-child(4n + 3) {
+  background: linear-gradient(to bottom, #000428, #004e92);
+}
+
+.full-width {
+  width: 100%;
+  background-color: #35548b;
+  color: white;
+  text-align: center;
+}
+
+.list-heading {
+  margin-left: 2%;
+  padding-block: 2%;
+  font-size: 18px;
+  margin-block: 0;
+}
+
+.oddBox,
+.evenBox {
+  width: 98%;
+  height: 170px;
+  color: white;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 2%;
+}
+
+.oddBox h3,
+.evenBox h3 {
+  margin: 0;
+}
+
+.evenBox:hover,
+.oddBox:hover {
+  transform: scale(1.05);
+}
+
+.arrow {
+  border: 1px solid white;
+  color: white;
+  border-radius: 50%;
+  align-self: flex-end;
+}
+
+.combine-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 40%;
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.companyName {
+  text-align: center;
+  font-size: 20px;
+  width: 80%;
+  margin-inline: auto;
+  color: white;
+}
