@@ -9,11 +9,10 @@ import '../components/company.css';
 const Company = () => {
   const data = useLocation();
   const url = window.location.pathname;
-  const newString = url.substring(8).toUpperCase;
-  console.log(newString);
+  const newString = url.substring(8);
   let symbol = data.name;
   if (typeof symbol === 'undefined') {
-    symbol = newString;
+    symbol = newString.toUpperCase();
   }
   const dispatch = useDispatch();
   useEffect(() => {
