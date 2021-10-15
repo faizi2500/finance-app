@@ -16,7 +16,7 @@ const CompanyBanner = ({
     <div className="parent-banner-div">
       <div className="banner-div">
         <div className="banner-img">
-          <img src={image} alt="company logo" />
+          <img src={image} alt="company logo N/A" />
         </div>
         <div className="banner-details">
           <h1>{name}</h1>
