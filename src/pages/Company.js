@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 // import PropTypes from 'prop-types';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { useLocation } from 'react-router';
-import { useDispatch, useSelector } from 'react-redux';
+import { Provider, useDispatch, useSelector } from 'react-redux';
 import { fetchCompanyFinancials } from '../redux/company/company';
 import CompanyPage from '../components/CompanyPage';
 import '../components/company.css';
@@ -26,9 +27,11 @@ const Company = () => {
     setState(companyData);
   }, 2000);
   return (
-    <>
-      <CompanyPage info={newState} symbol={symbol} />
-    </>
+    <Provider>
+      <Router basename={process.env.PUBLIC_URL}>
+        <CompanyPage info={newState} symbol={symbol} />
+      </Router>
+    </Provider>
   );
 };
 
