@@ -20,7 +20,7 @@ const Company = () => {
   const companyData = useSelector((state) => state.companyReducer.payload);
   const [newState, setState] = useState(companyData);
   if (data.name) {
-    setState('');
+    setState({});
   }
   setTimeout(() => {
     setState(companyData);
