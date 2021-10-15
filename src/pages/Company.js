@@ -11,9 +11,6 @@ const Company = () => {
   const url = window.location.href;
   const newString = url.substring(39);
   let symbol = newString;
-  if (data.name === newString) {
-    symbol = data.name;
-  }
   const dispatch = useDispatch();
   useEffect(() => {
     if (symbol) {
@@ -22,6 +19,9 @@ const Company = () => {
   }, [symbol]);
   const companyData = useSelector((state) => state.companyReducer.payload);
   const [newState, setState] = useState(companyData);
+  if (data.name) {
+    setState('');
+  }
   setTimeout(() => {
     setState(companyData);
   }, 2000);
